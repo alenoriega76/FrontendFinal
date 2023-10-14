@@ -1,0 +1,82 @@
+/* Register.css */
+
+.container {
+ 
+    margin-top: 40px;
+    margin: auto;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    display: flex;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+
+}
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.boton {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #2a214e;
+    /* Color personalizado para el botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4e369d;
+    /* Cambia el color al pasar el cursor */
+}
+
+/* Estilos para los errores (opcional) */
+ul {
+    list-style: none;
+    padding: 0;
+    color: #ff5722;
+    /* Color personalizado para los errores */
+    text-align: center;
+    font-weight: bold;
+}
+
+ul li {
+    margin: 5px 0;
+}

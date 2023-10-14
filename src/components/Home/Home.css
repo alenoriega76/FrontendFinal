@@ -1,0 +1,26 @@
+/* Inicio.css */
+
+.container {
+    background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.opaco {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo opaco */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-size: 36px;
+    margin-bottom: 10px;
+}

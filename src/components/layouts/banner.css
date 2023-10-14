@@ -1,0 +1,63 @@
+.banner-container{
+    position: relative;
+    width: 100%;
+ 
+    
+}
+
+.bacImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1; /* Coloca la imagen de fondo detrás del contenido */
+}
+
+.imgbanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen de fondo al tamaño del contenedor */
+}
+
+.bannerContent{
+    position: relative;
+    z-index: 1; /* Coloca el contenido sobre la imagen de fondo */
+    text-align: center;
+    color: #fff; /* Color del texto */
+    padding: 20px;   
+    width: 40%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.bannerContent h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #095b7b;
+
+}
+
+.bannerContent p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #8394d9;
+
+    font-weight: bold;
+}
+
+.bannerContent button {
+    background-color: #0c3143;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bannerContent button:hover {
+    background-color: #095b7b;
+}

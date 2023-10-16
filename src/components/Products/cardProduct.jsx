@@ -174,7 +174,7 @@ import { useState } from "react";
 // export default CardProducto;
 import PropTypes from 'prop-types';
 import './Busqueda.css';
-import ReactRating from 'react-rating';
+//import ReactRating from 'react-rating';
 
 import Swal from 'sweetalert2'; // Importa SweetAlert
 import { useNavigate } from 'react-router-dom';
@@ -185,7 +185,7 @@ function CardProducto({ producto, addToCart }) {
 
   if (!producto) {
     return <div>No hay productos disponibles</div>;
-  }
+  }/*
   const rating = parseFloat(producto.rating);
   const handleCalificacionChange = (nuevaCalificacion, productoId) => {
     // ... (tu código existente)
@@ -206,7 +206,7 @@ function CardProducto({ producto, addToCart }) {
         console.error('Error al actualizar la calificación:', error);
       });
   };
-
+*/
   const handleAgregarAlCarrito = () => {
     addToCart(producto);
 
@@ -231,7 +231,7 @@ function CardProducto({ producto, addToCart }) {
           <button className='add-to-cart' onClick={handleAgregarAlCarrito}>
             Agregar al carrito
           </button>
-          <ReactRating
+          {/*<ReactRating
             initialRating={rating}
             emptySymbol={<i className='far fa-star'></i>}
             fullSymbol={<i className='fas fa-star'></i>}
@@ -239,7 +239,7 @@ function CardProducto({ producto, addToCart }) {
               handleCalificacionChange(nuevaCalificacion, producto.id_productos)
             }
             readonly={true}
-          />
+          />*/}
         </div>
       </div>
     </div>

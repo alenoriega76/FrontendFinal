@@ -62,7 +62,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
   }
-  
+
   .confirmacion-compra .realizar-pedido {
     background-color: #007bff;
     color: #fff;
@@ -77,4 +77,17 @@
   .confirmacion-compra .realizar-pedido:hover {
     background-color: #0056b3;
   }
-  
+  .confirmacion-compra .finalizar-pedido{
+    background-color: #de4747;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+
+  }
+  .confirmacion-compra .finalizar-pedido:hover{
+    background-color: #473136;
+  }

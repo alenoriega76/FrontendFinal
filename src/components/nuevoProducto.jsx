@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import CardProducto from "../components/productos/cardProduct"; // Asegúrate de importar el componente CardProducto
+import CardProducto from "./Products/cardProduct"; // Asegúrate de importar el componente CardProducto
 
 function AdminProductos() {
   const [productos, setProductos] = useState([]);

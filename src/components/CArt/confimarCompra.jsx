@@ -175,6 +175,9 @@ const ConfirmacionCompra = () => {
     
           <button className="realizar-pedido" onClick={handlePlaceOrder}>
             Realizar Pedido
+          </button><br></br>
+          <button className="finalizar-pedido" onClick={handlePlaceOrder}>
+            Finalizar Pedido
           </button>
         </div>
       );

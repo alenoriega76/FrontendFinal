@@ -180,6 +180,7 @@ import { AuthProvider } from "./components/controllers/authContexto"; // Importa
 import Home from "./components/Home/Home";
 import ProductosListar from "./components/ProductosListar/ProductosListar";
 import ConfirmacionCompra from "./components/CArt/confimarCompra";
+import AdminProductos from "./components/nuevoProducto";
 function App() {
   const [cart, setCart] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -220,6 +221,7 @@ function App() {
               />
             }
           />
+          <Route path="/nuevo/producto" element={<AdminProductos setIsAdmin={setIsAdmin}/>} />
           <Route path="/confirmacion-compra" element={<ConfirmacionCompra/>} /> {/* pa aca le agregue los piquitos al componente*/}
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<Exit />} />

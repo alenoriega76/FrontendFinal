@@ -1,0 +1,78 @@
+/* adminProduc.css */
+
+.admin-products {
+    padding: 20px;
+  }
+  
+  .admin-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  .edit-form {
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-button, .save-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .edit-button:hover, .save-button:hover {
+    background-color: #0056b3;
+  }
+/* Estilos para el formulario de edición */
+.edit-form {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  /* Estilos para el producto antes de editarlo en forma de card */
+  .product-card {
+    /* Estilos existentes para la tarjeta de producto */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+  
+    /* Agregar estilos adicionales según tus preferencias */
+  }
+    

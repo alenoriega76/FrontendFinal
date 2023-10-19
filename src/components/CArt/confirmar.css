@@ -1,0 +1,80 @@
+/* ConfirmacionCompra.css */
+
+.confirmacion-compra {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .confirmacion-compra h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .confirmacion-compra h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  .confirmacion-compra .producto-info {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .confirmacion-compra .producto-info p {
+    margin: 5px 0;
+  }
+  
+  .confirmacion-compra .precio-total {
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .confirmacion-compra .datos-usuario {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .confirmacion-compra .datos-usuario p {
+    margin: 5px 0;
+  }
+  
+  .confirmacion-compra .datos-envio {
+    margin-top: 20px;
+  }
+  
+  .confirmacion-compra .datos-envio input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .confirmacion-compra .realizar-pedido {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .confirmacion-compra .realizar-pedido:hover {
+    background-color: #0056b3;
+  }
+  

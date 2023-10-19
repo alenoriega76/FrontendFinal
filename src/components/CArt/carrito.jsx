@@ -230,8 +230,9 @@ HASCTA ACA COMENTEEE
 
 import { useState, useEffect } from "react";
 import useCart from "../store/useCart";
-import './Carrito.css';
-import { Link } from 'react-router-dom';
+import "./Carrito.css";
+import { Link } from "react-router-dom";
+
 
 const Carrito = () => {
   const { cart, setCart, clearCart } = useCart();
@@ -268,7 +269,9 @@ const Carrito = () => {
   };
 
   const removeFromCart = (productToRemove) => {
-    const updatedCart = cart.filter((product) => product.id_productos !== productToRemove.id_productos);
+    const updatedCart = cart.filter(
+      (product) => product.id_productos !== productToRemove.id_productos
+    );
     setCart(updatedCart);
   };
 
@@ -278,7 +281,7 @@ const Carrito = () => {
       const total = cart.reduce((acc, product) => {
         const productPrice = parseFloat(product.precio);
         const productQuantity = product.cantidad;
-        return acc + (productPrice * productQuantity);
+        return acc + productPrice * productQuantity;
       }, 0);
       setTotal(total.toFixed(2));
     };
@@ -305,8 +308,7 @@ const Carrito = () => {
                 <span>
                   {typeof product.precio === "number"
                     ? `$${product.precio.toFixed(2)}`
-                    : "N/A"
-                  }
+                    : "N/A"}
                 </span>
               </div>
             </div>
@@ -336,10 +338,12 @@ const Carrito = () => {
         ))}
       </ul>
       <p>Total: ${total}</p>
-      <Link to="/pagar">
+      <Link to="/confirmacion-compra">
         <button>Ir a Pagar</button>
       </Link>
+
       <button onClick={clearCart}>Limpiar Carrito</button>
+      <div>{/* Contenido del carrito */}</div>
     </div>
   );
 };

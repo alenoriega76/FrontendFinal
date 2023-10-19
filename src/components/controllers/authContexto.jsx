@@ -1,25 +1,17 @@
-// context/AuthContext.js
 import { createContext, useContext, useState } from "react";
 import PropTypes from "prop-types";
 
 const AuthContext = createContext();
 
-export function useAuth() {
+function useAuth() {
   return useContext(AuthContext);
 }
 
-export function AuthProvider({ children }) {
+ function AuthProvider({ children }) {
   const [usuario, setUsuario] = useState(null);
 
-  const login = async (email) => {
-    try {
-   
-      const user = { email }; // Simulación
-      setUsuario(user);
-    } catch (error) {
-      console.error("Error al iniciar sesión:", error);
-      throw error;
-    }
+  const login = async (user) => {
+    setUsuario(user);
   };
 
   const logout = () => {
@@ -39,4 +31,4 @@ AuthProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default AuthProvider;
+export { AuthProvider, useAuth };

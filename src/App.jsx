@@ -97,21 +97,89 @@ export default App;
 
 // export default App;
 
+// codigo funcoinal!!!!
+// import { useState } from "react";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Nadvar from "./components/layouts/nadvar";
+// import Exit from './components/Exit/Exit'
+// import Carrito from "./components/CArt/carrito";
+// import Login from "./components/Login/login";
+// import Register from "./components/Register/Register";
+// import Usuarios from "./components/Usuarios/Usuarios";
+// import Footer from "./components/layouts/Footer";
+// //import ProtectedRoute from "./components/controllers/protectedRoutes";
+// import AuthProvider from "./components/controllers/protectedRoutes"; // Importa tu AuthProvider
+// import Home from "./components/Home/Home";
+// //import CardProducto from "./components/Products/cardProduct";
+// import ProductosListar from "./components/ProductosListar/ProductosListar";
+
+// function App() {
+//   const [cart, setCart] = useState([]);
+//   const [isAuthenticated, setIsAuthenticated] = useState(false);
+//   const [isAdmin, setIsAdmin] = useState(false);
+
+//   const addToCart = (product) => {
+//     setCart([...cart, product]);
+//   };
+
+//   return (
+//     <BrowserRouter>
+//       <AuthProvider>
+//         {" "}
+//         {/* Coloca AuthProvider aquí */}
+//         <Nadvar
+//           isAuthenticated={isAuthenticated}
+//           isAdmin={isAdmin}
+//           setIsAuthenticated={setIsAuthenticated}
+//           setIsAdmin={setIsAdmin}
+//         />
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/usuarios" element={<Usuarios />} />
+//           <Route
+//             path="/products"
+//             element={
+//               </*CardProducto*/ ProductosListar
+//                 addToCart={addToCart}
+//                 isAuthenticated={isAuthenticated}
+//               />
+//             }
+//           />
+//           <Route path="/carrito" element={<Carrito />} />
+//           <Route
+//             path="/login"
+//             element={
+//               <Login
+//                 setIsAuthenticated={setIsAuthenticated}
+//                 setIsAdmin={setIsAdmin}
+//               />
+//             }
+//           />
+//           <Route path="/register" element={<Register />} />
+//           <Route path="/logout" element={<Exit />} />
+//         </Routes>
+//         <Footer />
+//       </AuthProvider>
+//     </BrowserRouter>
+//   );
+
+// }
+
+// export default App;
+
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nadvar from "./components/layouts/nadvar";
-import Exit from './components/Exit/Exit'
+import Exit from "./components/Exit/Exit";
 import Carrito from "./components/CArt/carrito";
 import Login from "./components/Login/login";
 import Register from "./components/Register/Register";
 import Usuarios from "./components/Usuarios/Usuarios";
 import Footer from "./components/layouts/Footer";
-
-import AuthProvider from "./components/controllers/authContexto"; // Importa tu AuthProvider
+import { AuthProvider } from "./components/controllers/authContexto"; // Importa el AuthProvider
 import Home from "./components/Home/Home";
-//import CardProducto from "./components/Products/cardProduct";
 import ProductosListar from "./components/ProductosListar/ProductosListar";
-
+import ConfirmacionCompra from "./components/CArt/confimarCompra";
 function App() {
   const [cart, setCart] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -124,8 +192,6 @@ function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        {" "}
-        {/* Coloca AuthProvider aquí */}
         <Nadvar
           isAuthenticated={isAuthenticated}
           isAdmin={isAdmin}
@@ -138,7 +204,7 @@ function App() {
           <Route
             path="/products"
             element={
-              </*CardProducto*/ ProductosListar
+              <ProductosListar
                 addToCart={addToCart}
                 isAuthenticated={isAuthenticated}
               />
@@ -154,6 +220,7 @@ function App() {
               />
             }
           />
+          <Route path="/confirmacion-compra" element={<ConfirmacionCompra/>} /> {/* pa aca le agregue los piquitos al componente*/}
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<Exit />} />
         </Routes>

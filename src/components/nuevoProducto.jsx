@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import CardProducto from "./Products/cardProduct"; // Asegúrate de importar el componente CardProducto
+import  { useState, useEffect } from "react";
 
 function AdminProductos() {
   const [productos, setProductos] = useState([]);
@@ -10,7 +9,7 @@ function AdminProductos() {
     fetch('http://localhost:4000/products', {
       method: 'GET',
       headers: {
-        'Origin': 'http://localhost:5371', // Reemplaza con la URL de tu frontend
+        'Origin': 'http://localhost:5371', 
       },
     })
       .then((response) => {
@@ -54,6 +53,14 @@ function AdminProductos() {
     }
   };
 
+  const handleInputChange = (e, property) => {
+    const newValue = e.target.value;
+    setProductoSeleccionado((prevProducto) => ({
+      ...prevProducto,
+      [property]: newValue,
+    }));
+  };
+
   return (
     <div className="admin-products">
       <h2>Administrar Productos</h2>
@@ -62,12 +69,26 @@ function AdminProductos() {
           <div key={producto.id}>
             {productoSeleccionado !== producto ? (
               <>
-                <CardProducto producto={producto} />
+                <div>
+                  <strong>Nombre:</strong> {producto.nombre}
+                  <strong>Descripcion:</strong> {producto.descripcion}
+                  <strong>Precio:</strong> {producto.precio}
+                  <strong>Imagen:</strong> {producto.imagen}
+                </div>
+             
                 <button onClick={() => handleEditarProducto(producto)}>Editar</button>
               </>
             ) : (
               <>
-                <CardProducto producto={productoSeleccionado} isEditable={true} />
+                <form>
+                  <label>Nombre:</label>
+                  <input
+                    type="text"
+                    value={productoSeleccionado.nombre}
+                    onChange={(e) => handleInputChange(e, 'nombre')}
+                  />
+                  {/* Agregar campos similares para otras propiedades del producto */}
+                </form>
                 <button onClick={() => handleGuardarCambios(productoSeleccionado)}>Guardar Cambios</button>
               </>
             )}

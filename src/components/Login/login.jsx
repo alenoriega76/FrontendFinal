@@ -23,7 +23,7 @@ function Login() {
       });
       return;
      
-    } <Navigate to="/products"/>
+    } 
 
     try {
       const response = await fetch('http://localhost:4000/login', {
@@ -43,8 +43,8 @@ function Login() {
 
         login(data); // Inicia sesión y almacena la información del usuario en el contexto de autenticación
 
-        if (role === 'admin') {
-          Navigate('/nuevoProducto');
+        if (role === 'admin' || role === 1) {
+          Navigate('/nuevo/producto');
         } else {
           Navigate('/products');
         }

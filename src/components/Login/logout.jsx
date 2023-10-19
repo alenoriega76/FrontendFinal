@@ -20,7 +20,7 @@ function Logout() {
   // Llama a la función de cierre de sesión al cargar el componente
   handleLogout();
 
-  // Puedes mostrar un mensaje de cierre de sesión en este componente si lo deseas
+ 
 
   return null; // Devuelve null para evitar renderizar contenido en este componente
 }
